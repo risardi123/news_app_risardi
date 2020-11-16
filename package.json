@@ -5,7 +5,9 @@
   "scripts": {
     "android": "react-native run-android",
     "android-release": "react-native run-android --variant=release",
-    "android-build": "cd android && ./gradlew assembleRelease && cd ..",
+    "android-build": "cd android && ./gradlew assembleProdRelease && cd ..",
+    "android-dev":"cd android && ./gradlew assembleDevRelease && cd ..",
+    "android-stag": "cd android && ./gradlew assembleStagingRelease && cd ..",
     "clean": "cd android && ./gradlew clean && cd..",
     "node:clean": "rm -rf node_modules && yarn install",
     "ios": "react-native run-ios",
