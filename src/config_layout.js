@@ -5,7 +5,7 @@ import {
 
 const horizontal = 12
 const vertical = 6
-const topOrBottom = 16
+const topOrBottom = 12
 const allPadding = 8
 
 const {

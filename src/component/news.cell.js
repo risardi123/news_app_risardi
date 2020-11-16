@@ -13,21 +13,26 @@ const News = (props) => {
   const {imageLink, title, onPressTitle, isDelete, onPressBookMark, description} = props
   return(
     <View style={Styles.container}>
-      <View style={Styles.image}>
-        <Image source={{uri: imageLink || "" }}
+      <View style={{backgroundColor: 'lightgray', width: DeviceWidth * 0.3}}>
+        <Image source={{uri: imageLink || null }}
                style={Styles.flexOne}/>
       </View>
       <View style={Styles.containerRight}>
         <View style={{justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row', marginBottom: allPadding}}>
-          <Text style={{fontSize: 16, fontWeight: 'bold'}}
-                onPress={onPressTitle}>
-            {title}
-          </Text>
-          <MaterialCommunityIcons
-            onPress={onPressBookMark}
-            name={!isDelete ? 'bookmark-outline' : 'delete-outline'}
-            color={!isDelete ? "black" : 'red'}
-            size={24}/>
+          <View style={{flex: 1, paddingRight: allPadding}}>
+            <Text style={{fontSize: 16, fontWeight: 'bold'}}
+                  numberOfLines={1}
+                  onPress={onPressTitle}>
+              {title}
+            </Text>
+          </View>
+          <View>
+            <MaterialCommunityIcons
+              onPress={onPressBookMark}
+              name={!isDelete ? 'bookmark-outline' : 'delete-outline'}
+              color={!isDelete ? "black" : 'red'}
+              size={24}/>
+          </View>
         </View>
         <Text numberOfLines={4}>
           {description}
@@ -57,10 +62,10 @@ const Styles = StyleSheet.create({
   },
   containerRight:{
     flex: 2,
-    marginLeft: allPadding
+    marginLeft: allPadding,
   },
   image:{
-    width: DeviceWidth * 0.4,
-    height: 100
+    width: DeviceWidth * 0.3,
+    height: 80,
   }
 })

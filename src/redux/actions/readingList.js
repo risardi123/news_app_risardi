@@ -1,6 +1,6 @@
 const addReadingList = (item) => {
   return {
-    type: "UPDATE_READING_LIST",
+    type: "ADD_READING_LIST",
     payload: item
   }
 }
