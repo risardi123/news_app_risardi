@@ -1,6 +1,6 @@
-#Selamat datang di NEWS APP
+# Selamat datang di NEWS APP
 
-####cara setup project
+#### cara setup project
 1. Daftarkan diri di www.newsapi.org dan dapatkan key api
 2. Buat sebuah file config_key.js | Path: /src/config_key.js 
 3. isikan config_key.js dengan 
