@@ -1,15 +1,9 @@
-const initial_state = {
-  list: []
-}
-const reading_list = (state= initial_state, action) => {
-  console.log("reduers: "+JSON.stringify(action.payload, null, 2))
+const reading_list = (state=[], action) => {
   switch (action.type){
     case "ADD_READING_LIST":
-      return state
-    case "UPDATE_READING_LIST":
-      return {
-        state:[...action.payload],
-      }
+      return [...state, action.payload]
+    case "DELETE_READING_LIST":
+      return state.reduce((p,c) => (c.book_mark_id !== action.book_mark_id && p.push(c),p),[])
     default:
       return state
   }

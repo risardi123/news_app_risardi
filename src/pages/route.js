@@ -4,7 +4,6 @@ import {NavigationContainer} from '@react-navigation/native';
 import Home from './home';
 import HomeReadingList from './homeReadingList';
 
-
 const Stack = createStackNavigator()
 const Root = () =>{
   return(

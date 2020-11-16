@@ -1,5 +1,8 @@
 import React from 'react'
-import {horizontal, toolBarHeight} from '../config_layout';
+import {
+  horizontal,
+  toolBarHeight
+} from '../config_layout';
 import {
   View,
   StyleSheet,

@@ -4,10 +4,10 @@ const addReadingList = (item) => {
     payload: item
   }
 }
-const deleteReadingList = () => {
+const deleteReadingList = (id) => {
   return {
-    type: "UPDATE_READING_LIST",
-    payload: [1,32]
+    type: "DELETE_READING_LIST",
+    book_mark_id: id
   }
 }
 export {

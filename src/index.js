@@ -11,7 +11,7 @@ import {SafeAreaProvider} from 'react-native-safe-area-context';
 const persistConfig = {
   key: "root",
   storage: AsyncStorage,
-  whitelist:[""]
+  whitelist:["reading_list"]
 }
 const persistReducers = persistReducer(persistConfig, RootReducers)
 const store = createStore(persistReducers)

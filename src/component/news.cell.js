@@ -10,9 +10,10 @@ import {allPadding, DeviceWidth, topOrBottom} from '../config_layout';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const News = (props) => {
-  const {imageLink, title, onPressTitle, isDelete, onPressBookMark, description} = props
+  const {imageLink, title, onPressTitle, isDelete, onPressBookMark, description, id} = props
   return(
-    <View style={Styles.container}>
+    <View style={Styles.container}
+          key={id}>
       <View style={{backgroundColor: 'lightgray', width: DeviceWidth * 0.3}}>
         <Image source={{uri: imageLink || null }}
                style={Styles.flexOne}/>
